@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GuessingNumberGame</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container " id="container">
+        <header>
+            <div class="game-header">
+                <input type="button" value="Play Again!" class="again-button">
+                <p class="hint abs">(Between 1 and 20)</p>
+                <h1 class="game-name abs">Guess my number!</h1>
+                <div class="answer-div abs" number>?</div>
+            </div>
+        </header>
+
+        <section>
+            <div class="section-div flex">
+
+                <div class="input-div">
+                    <input type="number" class="number same" id="number">
+                    <input type="button" value="Check!" class="check same" id="check-number">
+                </div>
+    
+                <div class="score-div">
+                    <div class="right-number-span flex" >
+                        <p>📈</p>
+                        <span class="down">Quessing...</span>
+                    </div> 
+                    <div class="score flex">
+                        <p>🥇</p>
+                        <p>Score :</p>
+                        <span class="down">20</span>
+                    </div> 
+
+                    <div class="high-score flex">
+                        <p>🥉</p>
+                        <p>High score :</p>
+                        <span class="down"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+</body>
+<script src="script.js"></script>
+</html>

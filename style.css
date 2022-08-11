@@ -1,0 +1,124 @@
+body{
+    margin: 0 auto;
+   font-family: cursive;
+    /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    color: white;
+}
+.game-container{
+    max-width: 100%;
+    background-color: black;
+    width: 100%;
+    height: 100vh;
+    
+}
+.game-header{
+    position: relative;
+    height: 200px;
+    border-bottom: 3px solid white;
+}
+.game-header input[type = "button"]{
+    border: 1px solid white;
+    transition: 1 ease;
+    cursor: pointer;
+   margin: 1em;
+   padding: 0.5em 1.5em;
+   font-weight: bold;
+   transition: 0.1 ease;
+}
+
+.game-header input[type = "button"]:hover{
+    background-color: rgb(147, 147, 192);
+    
+ }
+ 
+ .game-header input[type = "button"]:focus{
+     background-color: rgb(115, 115, 172);
+ }
+.abs{
+    position: absolute;
+}
+.answer-div {
+    font-size: 2em;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    padding-top: 0.5em;
+    color: black;
+    background-color: white;
+    top: 5.5em;
+    left: 40%;
+    width: 25%;
+    height: 2em;
+    transform: translateY(-25%);
+    /* transform: translateX(-50%); */
+}
+.game-name{
+    left:35% ;
+}
+.hint{
+    left:75% ;
+    top: 0em;
+    font-size:small ;
+}
+.section-div{
+    
+    margin-top: 6em;
+}
+.score-div,.input-div{
+    /* border: 1px solid white; */
+   flex: 50%;
+}
+.flex{
+    display: flex;
+}
+.down{
+    margin: 1em 1em ;
+}
+.input-div{
+    display: flex;
+    flex-direction: column;
+    margin-left: 2em;
+}
+.input-div .number{
+    /* cursor: vertical-text; */
+    color: white;
+    border: 1px solid white;
+    background-color: black;
+    font-size: 1.5em;
+    margin-left: 2em;
+    width: 40%;
+    height: 2em;
+}
+.same{
+    outline: none;
+    text-align: center;
+}
+.input-div .check{
+    border: 1px solid white;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 0.5em 1.5em;
+    margin-left: 5em;
+    margin-top: 2em;
+    width: 30%;
+    height: 3em;
+}
+.input-div .check:hover{
+   background-color: rgb(147, 147, 192);
+}
+
+.input-div .check:focus{
+    background-color: rgb(115, 115, 172);
+ }
+@media screen and (min-width: 700px) {
+    .game-container{
+        /* max-width: 100%; */
+        width: 60%;
+        height: 100vh;
+        
+    }
+}
