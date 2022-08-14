@@ -31,30 +31,34 @@ checknumber.addEventListener('click', function(){
         }else{ 
             answer_div.textContent = nber;
             game_container.style.background = 'green';
+            number.style.background = 'green';
             right_number_span.textContent = '🎁'
             down.textContent = 'Correct Number!';
 
-            high_score.textContent = score.textContent
             localStorage.setItem('highscore', high_score.textContent);
+
+            if(score.textContent > high_score.textContent){
+                high_score.textContent = score.textContent;
+            }
         }
 
     }
 })
-
+// display message if the score number reaches 0
 function collectScore(){
     if(score.textContent == 0){
         right_number_span.textContent = '😧'
         down.textContent = 'Sorry you did not get the number. You can play again';
     }
 }
-
+// reload game 
 again_button.addEventListener('click', ()=>{
     loadAgain();
    })
 function loadAgain(){
     location.reload();
 }
-
+// restoring the last high score after reloading the game
 window.addEventListener('DOMContentLoaded', function(){
     high_score.textContent = localStorage.getItem('highscore');
 
