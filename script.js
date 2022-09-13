@@ -12,6 +12,8 @@ let answer_div = document.querySelector('.answer-div');
 let high_score = document.querySelector('.high-score >span');
 let again_button = document.querySelector('.again-button');
 
+const high_score_memory = localStorage.getItem('highscore');
+high_score.textContent = high_score_memory;
 
 checknumber.addEventListener('click', function(){
     const nber = number.value;
@@ -32,13 +34,14 @@ checknumber.addEventListener('click', function(){
             answer_div.textContent = nber;
             game_container.style.background = 'green';
             number.style.background = 'green';
-            right_number_span.textContent = '🎁'
+            right_number_span.textContent = '🎁 🍾'
             down.textContent = 'Correct Number!';
 
             localStorage.setItem('highscore', high_score.textContent);
 
             if(score.textContent > high_score.textContent){
                 high_score.textContent = score.textContent;
+                localStorage.setItem('highscore', high_score.textContent);
             }
         }
 
@@ -53,13 +56,5 @@ function collectScore(){
 }
 // reload game 
 again_button.addEventListener('click', ()=>{
-    loadAgain();
-   })
-function loadAgain(){
     location.reload();
-}
-// restoring the last high score after reloading the game
-window.addEventListener('DOMContentLoaded', function(){
-    high_score.textContent = localStorage.getItem('highscore');
-
-})
+   })
